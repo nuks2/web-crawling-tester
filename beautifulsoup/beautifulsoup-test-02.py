@@ -16,9 +16,9 @@ bsObj = BeautifulSoup(html, "html.parser")
 # parent
 # print(bsObj.find("img",{"src":"../img/gifts/img1.jpg"}).parent.previous_sibling.get_text())
 
-images = bsObj.findAll("img", {"src":re.compile("\.\.\/img\/gifts/img.*\.jpg")})
-for image in images: 
-    print(image["src"])
+# images = bsObj.findAll("img", {"src":re.compile("\.\.\/img\/gifts/img.*\.jpg")})
+# for image in images: 
+#     print(image["src"])
 
 tags = bsObj.findAll(lambda tag: len(tag.attrs) == 2)
 for tag in tags:
