@@ -11,5 +11,4 @@ for li in lis:
     a_tag = li.find("a")
     print(a_tag.text)
 
-# first_a = top_right.find("a")
-# print(first_a.text)
+
