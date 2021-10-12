@@ -22,8 +22,8 @@ def getTitle(url):
         return None
     return title
 
-title = getTitle("http://www.pythonscraping.com/exercises/exercise1.html")
-# title = getTitle("http://www.pythonscraping.com/exercises/exercise001.html")
+# title = getTitle("http://www.pythonscraping.com/exercises/exercise1.html")
+title = getTitle("http://www.pythonscraping.com/exercises/exercise001.html")
 if title == None:
     print("Title could not be found")
 else:
