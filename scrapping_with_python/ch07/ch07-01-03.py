@@ -2,6 +2,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
 import string
+from collections import OrderedDict
+
 
 def cleanInput(input):
     input = re.sub('\n+', " ", input)
@@ -33,4 +35,7 @@ bsObj = BeautifulSoup(html, "html.parser")
 content = bsObj.find("div", {"id":"mw-content-text"}).get_text()
 
 ngrams = getNgrams(content, 2)
-print(ngrams)
+print('Not sorted : ', ngrams)
+
+ngrams = OrderedDict(sorted(ngrams.items(), key=lambda t: t[1], reverse=True))
+print('Sorted : ', ngrams)
