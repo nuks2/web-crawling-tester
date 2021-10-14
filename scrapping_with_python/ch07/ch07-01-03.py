@@ -12,9 +12,7 @@ def cleanInput(input):
     cleanInput = []
     input = input.split(' ')
     for item in input:
-        print('previous item : ', item)
         item = item.strip(string.punctuation)
-        print('after item : ', item)
         if len(item) > 1 or (item.lower() == 'a' or item.lower() == 'i'):
             cleanInput.append(item)
     return cleanInput
@@ -35,4 +33,4 @@ bsObj = BeautifulSoup(html, "html.parser")
 content = bsObj.find("div", {"id":"mw-content-text"}).get_text()
 
 ngrams = getNgrams(content, 2)
-# print(ngrams)
+print(ngrams)
