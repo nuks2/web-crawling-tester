@@ -5,7 +5,7 @@ import operator
 
 
 def cleanInput(input):
-    input = re.sub('\n+', " ", input).lower()
+    input = re.sub('\n+', " ", input)
     input = re.sub('\[[0-9]*\]', "", input)
     input = re.sub(' +', " ", input)
     input = bytes(input, "UTF-8")
